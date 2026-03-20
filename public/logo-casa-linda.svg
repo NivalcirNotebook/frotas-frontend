@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80">
+  <!-- Casa Linda Logo -->
+  <defs>
+    <style>
+      .orange { fill: #FF8C42; }
+      .brown { fill: #8B6F47; }
+    </style>
+  </defs>
+  
+  <!-- Telhado -->
+  <path class="orange" d="M 60 15 L 90 5 L 120 15 L 115 25 L 90 15 L 65 25 Z"/>
+  <circle class="orange" cx="110" cy="8" r="3"/>
+  
+  <!-- Casa -->
+  <path class="orange" d="M 70 25 L 110 25 L 110 45 L 70 45 Z"/>
+  <rect class="orange" x="75" y="30" width="10" height="12" fill="white"/>
+  <rect class="orange" x="95" y="30" width="10" height="12" fill="white"/>
+  
+  <!-- Texto CASA -->
+  <text x="25" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="bold" class="orange">CASA</text>
+  
+  <!-- Texto LINDA -->
+  <text x="98" y="60" font-family="Arial, sans-serif" font-size="24" font-weight="normal" class="brown">LINDA</text>
+</svg>
