@@ -6,15 +6,14 @@ function Dashboard({ veiculos }) {
   const { getAuthHeader } = useAuth();
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     carregarEstatisticas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const carregarEstatisticas = async () => {
     setLoading(true);
-    setError(null);
     try {
       const response = await fetch(`${API_URL}/api/analise/frota`, {
         headers: getAuthHeader()

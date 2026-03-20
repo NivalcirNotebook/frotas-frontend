@@ -11,6 +11,7 @@ function PerformanceMotorista() {
 
   useEffect(() => {
     carregarMotoristas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const carregarMotoristas = async () => {
