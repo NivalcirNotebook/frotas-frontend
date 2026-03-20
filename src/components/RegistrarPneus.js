@@ -24,6 +24,7 @@ function RegistrarPneus({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarTrocasPneus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
