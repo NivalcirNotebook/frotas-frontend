@@ -20,6 +20,7 @@ function RegistrarAbastecimento({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarAbastecimentos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

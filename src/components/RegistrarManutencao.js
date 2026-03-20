@@ -22,6 +22,7 @@ function RegistrarManutencao({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarManutencoes();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

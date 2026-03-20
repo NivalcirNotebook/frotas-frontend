@@ -19,6 +19,7 @@ function MotoristasList() {
 
   useEffect(() => {
     carregarMotoristas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mostrarInativos]);
 
   useEffect(() => {
