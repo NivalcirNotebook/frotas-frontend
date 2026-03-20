@@ -27,7 +27,6 @@ function Dashboard({ veiculos }) {
       setStats(data);
     } catch (error) {
       console.error('Erro ao carregar estatísticas:', error);
-      setError(error.message);
       // Set default stats to avoid errors
       setStats({
         totalVeiculos: 0,
