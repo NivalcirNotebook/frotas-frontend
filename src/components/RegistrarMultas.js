@@ -47,6 +47,7 @@ function RegistrarMultas({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarMultas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

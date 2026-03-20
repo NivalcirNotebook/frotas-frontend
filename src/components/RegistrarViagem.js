@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { formatDateBR } from '../utils/dateUtils';
 import { API_URL } from '../config';
 
 function RegistrarViagem({ veiculos, onSuccess }) {
@@ -25,6 +24,7 @@ function RegistrarViagem({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarViagens();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

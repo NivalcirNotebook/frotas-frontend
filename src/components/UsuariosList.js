@@ -15,6 +15,7 @@ function UsuariosList() {
 
   useEffect(() => {
     carregarUsuarios();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const carregarUsuarios = async () => {

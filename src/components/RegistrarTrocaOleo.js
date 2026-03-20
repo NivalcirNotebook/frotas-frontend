@@ -26,6 +26,7 @@ function RegistrarTrocaOleo({ veiculos, onSuccess }) {
   useEffect(() => {
     carregarMotoristas();
     carregarTrocasOleo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
