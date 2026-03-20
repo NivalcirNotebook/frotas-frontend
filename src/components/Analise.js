@@ -17,6 +17,7 @@ function Analise({ veiculos, onNavigate }) {
     if (selectedVeiculo) {
       carregarAnalise();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedVeiculo]);
 
   const carregarMotoristas = async () => {

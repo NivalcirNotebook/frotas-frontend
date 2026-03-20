@@ -27,6 +27,7 @@ function AppContent() {
     if (isAuthenticated) {
       carregarVeiculos();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
   const carregarVeiculos = async () => {
