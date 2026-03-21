@@ -122,8 +122,9 @@ function MotoristasList() {
     if (!window.confirm('Deseja realmente desativar este motorista?')) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/api/motoristas/${id}`, {
+      const response = await fetch(`${API_URL}/api/motoristas/${id}`, {
         method: 'DELETE',
+        headers: getAuthHeader()
       });
 
       if (response.ok) {
@@ -139,9 +140,10 @@ function MotoristasList() {
 
   const ativarMotorista = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/motoristas/${id}`, {
+      const response = await fetch(`${API_URL}/api/motoristas/${id}`, {
         method: 'PUT',
         headers: {
+          ...getAuthHeader(),
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ ativo: true }),

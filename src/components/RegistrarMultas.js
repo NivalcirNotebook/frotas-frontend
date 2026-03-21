@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { formatDateTimeLocal } from '../utils/dateUtils';
 import { API_URL } from '../config';
 
 function RegistrarMultas({ veiculos, onSuccess }) {
@@ -256,7 +257,7 @@ function RegistrarMultas({ veiculos, onSuccess }) {
   };
 
   const handleMarcarComoPaga = async (multa) => {
-    const dataPagamento = prompt('Data do pagamento (AAAA-MM-DD):', new Date().toISOString().split('T')[0]);
+    const dataPagamento = prompt('Data do pagamento (AAAA-MM-DD):', formatDateTimeLocal().split('T')[0]);
     if (!dataPagamento) return;
 
     const valorPago = prompt('Valor pago:', multa.valorMulta);

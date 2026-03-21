@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { formatDateBR } from '../utils/dateUtils';
+import { formatDateBR, formatDateTimeLocal } from '../utils/dateUtils';
 import { API_URL } from '../config';
 
 function RegistrarManutencao({ veiculos, onSuccess }) {
@@ -8,7 +8,7 @@ function RegistrarManutencao({ veiculos, onSuccess }) {
   const [formData, setFormData] = useState({
     veiculoId: '',
     motoristaId: '',
-    data: new Date().toISOString().split('T')[0],
+    data: formatDateTimeLocal(),
     km: '',
     tipo: 'Preventiva',
     descricao: '',
@@ -106,7 +106,7 @@ function RegistrarManutencao({ veiculos, onSuccess }) {
         setFormData({
           veiculoId: formData.veiculoId,
           motoristaId: '',
-          data: new Date().toISOString().split('T')[0],
+          data: formatDateTimeLocal(),
           km: '',
           tipo: 'Preventiva',
           descricao: '',
