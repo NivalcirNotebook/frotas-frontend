@@ -106,7 +106,7 @@ function RegistrarManutencao({ veiculos, onSuccess }) {
         setFormData({
           veiculoId: formData.veiculoId,
           motoristaId: '',
-          data: new Date().toISOString().split('T')[0],
+          data: formatDateTimeLocal(),
           km: '',
           tipo: 'Preventiva',
           descricao: '',

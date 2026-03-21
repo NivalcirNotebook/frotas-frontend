@@ -118,7 +118,7 @@ function RegistrarRevisao({ veiculos, onSuccess }) {
         setFormData({
           veiculoId: formData.veiculoId,
           motoristaId: '',
-          data: new Date().toISOString().split('T')[0],
+          data: formatDateTimeLocal(),
           km: '',
           tipoRevisao: 'Preventiva',
           itensRevisados: {

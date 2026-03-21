@@ -257,7 +257,7 @@ function RegistrarMultas({ veiculos, onSuccess }) {
   };
 
   const handleMarcarComoPaga = async (multa) => {
-    const dataPagamento = prompt('Data do pagamento (AAAA-MM-DD):', new Date().toISOString().split('T')[0]);
+    const dataPagamento = prompt('Data do pagamento (AAAA-MM-DD):', formatDateTimeLocal().split('T')[0]);
     if (!dataPagamento) return;
 
     const valorPago = prompt('Valor pago:', multa.valorMulta);

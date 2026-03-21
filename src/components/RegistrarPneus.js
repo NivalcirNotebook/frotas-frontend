@@ -108,7 +108,7 @@ function RegistrarPneus({ veiculos, onSuccess }) {
         setFormData({
           veiculoId: formData.veiculoId,
           motoristaId: '',
-          data: new Date().toISOString().split('T')[0],
+          data: formatDateTimeLocal(),
           km: '',
           eixo: '',
           posicao: '',
