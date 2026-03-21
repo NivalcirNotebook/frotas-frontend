@@ -50,7 +50,9 @@ function RegistrarPneus({ veiculos, onSuccess }) {
   const carregarTrocasPneus = async () => {
     try {
       const response = await fetch(`${API_URL}/api/veiculos`);
+      if (!response.ok) return;
       const veiculosAtualizados = await response.json();
+      if (!Array.isArray(veiculosAtualizados)) return;
       
       const todasTrocas = [];
       for (const veiculo of veiculosAtualizados) {
