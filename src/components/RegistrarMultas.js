@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { formatDateTimeLocal } from '../utils/dateUtils';
 import { API_URL } from '../config';
 
 function RegistrarMultas({ veiculos, onSuccess }) {

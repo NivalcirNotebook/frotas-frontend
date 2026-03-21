@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { formatDateBR } from '../utils/dateUtils';
+import { formatDateBR, formatDateTimeLocal } from '../utils/dateUtils';
 import { API_URL } from '../config';
 
 function RegistrarTrocaOleo({ veiculos, onSuccess }) {
@@ -8,7 +8,7 @@ function RegistrarTrocaOleo({ veiculos, onSuccess }) {
   const [formData, setFormData] = useState({
     veiculoId: '',
     motoristaId: '',
-    data: new Date().toISOString().split('T')[0],
+    data: formatDateTimeLocal(),
     km: '',
     tipoOleo: '',
     quantidade: '',
