@@ -60,7 +60,9 @@ function RegistrarRevisao({ veiculos, onSuccess }) {
   const carregarRevisoes = async () => {
     try {
       const response = await fetch(`${API_URL}/api/veiculos`);
+      if (!response.ok) return;
       const veiculosAtualizados = await response.json();
+      if (!Array.isArray(veiculosAtualizados)) return;
       
       const todasRevisoes = [];
       for (const veiculo of veiculosAtualizados) {

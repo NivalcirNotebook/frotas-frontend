@@ -103,9 +103,10 @@ function RegistrarAbastecimento({ veiculos, onSuccess }) {
 
   const carregarAbastecimentos = async () => {
     try {
-      // Buscar veículos atualizados do servidor
-      const response = await fetch('http://localhost:3001/api/veiculos');
+      const response = await fetch(`${API_URL}/api/veiculos`);
+      if (!response.ok) return;
       const veiculosAtualizados = await response.json();
+      if (!Array.isArray(veiculosAtualizados)) return;
       
       const todosAbastecimentos = [];
       for (const veiculo of veiculosAtualizados) {
